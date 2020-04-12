@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+
+{% block title %}Home{%endblock title%}
+
+{% block body %}
+    <div class = "home_container" style="height: 92vh; background-image: url({{ image }}">
+        <div class = "center_text">
+            <h1>{{ object.title }}</h1>
+            <p>{{ object.message }}</p>
+        </div>
+    </div>
+
+{% endblock body %}

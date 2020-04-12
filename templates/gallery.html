@@ -1,0 +1,24 @@
+{% extends '_base.html' %}
+
+{% block title %}Gallery{% endblock title%}
+
+{% block body %}
+    <div class = "category_menu">
+        {% for category in categories %}
+            <a href="/gallery/?category={{category.title}}">{{ category }}</a>
+        {% endfor %}
+    </div>
+
+    <div class="thumbnail_layout">
+
+        {% for photo in photos %}
+            <a href="/gallery/{{photo.pk}}/" class = "thumbnail_item" style="background-image: url({{photo.image}})">
+                <div class="thumbnail_content_layout">
+                    <div class = "thumbnail_header">{{ photo.title }} {{ photo.category }}</div>
+                    <div class = "thumbnail_footer">{{ photo.uploaded|date:"b. d." }}</div>
+                 </div>
+            </a>
+        {% endfor %}
+    </div>
+
+{% endblock body %}

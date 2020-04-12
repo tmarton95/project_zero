@@ -1,0 +1,26 @@
+@import "menu.css";
+@import "home.css";
+@import "gallery.css";
+@import "photo_details.css";
+
+*{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+}
+
+body{
+       background-color: rgb(0,43, 73);
+       color: white;
+       font-family: 'Noto Sans JP';
+}
+
+p{
+       font-size: 15px;
+       text-align: left;
+       color: white;
+}
+
+.content_box{
+       padding-top: 50px;
+}
